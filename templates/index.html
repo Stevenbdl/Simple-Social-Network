@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Import font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!--Import google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <title>Social network</title>
+</head>
+
+<body>
+    <div class="log">
+        <form action="{{ url_for('logout') }}">
+            <button>Logout</button>
+        </form>
+        <form action="{{ url_for('delete') }}">
+            <button>Delete account</button>
+        </form>
+    </div>
+    <center>
+        <h1>Welcome</h1>
+    </center>
+    <div class="user-icon">
+        <i class="fas fa-user"></i>
+        <p>Welcome {{ usr }} you logged successfully</p>
+    </div>
+    <!--Search -->
+    <div class="search">
+        <form action="" method="post">
+            <input type="email" name="search" placeholder="Search account" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <!--POST-->
+    <div class="post">
+        <form action="{{ url_for('comments') }}" method="post">
+            <h2>Add a new post:</h2>
+            <textarea name="publication" cols="40" rows="10"></textarea>
+            <button class="post-button" type="submit">post</button>
+        </form>
+    </div>
+    <br>
+    <center><h2>Your posts</h2></center>
+    {% for p in posts[::-1] %}
+    <form action="{{ url_for('delete_comments') }}" method="post">
+        <table>
+            <tr>
+                <th>Date: <input type="text" name="date" class="aux" value="{{ p[2] }}" id="" readonly></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="post" class="aux1" value="{{ p[1] }}" id="" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" class="aux2" name="id" value="{{ p[0] }}" id="" readonly><button type="submit" class="delete-post">delete</button></td>
+            </tr>
+        </table>
+        <br>
+    </form>
+    {% endfor %}
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Import google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Sulphur+Point&display=swap" rel="stylesheet"> 
+    <title>Sign up</title>
+</head>
+
+<body>
+    {% if email_exist %}
+        <center><p>The email already exists</p></center>
+    {% endif %}
+
+    
+    {% if succ %}
+        <center><p>Successfully registered</p></center>
+    {% endif %}
+    <div class="registro">
+        <h1>S i g n u p</h1>
+        <form action="" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="submit" value="Signup"><br><br>
+            ¿Already Registered? <a href="{{ url_for('login') }}">Log in</a>
+        </form>
+    </div>
+</body>
+
+</html>

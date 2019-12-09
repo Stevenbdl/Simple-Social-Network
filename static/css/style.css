@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-family: 'Solway', serif;
+}
+.registro{
+    padding: 100px;
+    margin: 10px auto;
+    text-align: center;/*Center text and button*/
+}
+.registro h1{
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Calistoga', cursive;
+
+
+}
+
+
+.registro input[type="email"], input[type="password"]{
+    width: 50%;
+    padding: 15px;
+    display: block;
+    margin: 10px auto;/*Center inputs*/
+    border: 1px solid #d2d2d2; 
+}
+.registro input[type="email"]:focus, .registro input[type="password"]:focus{
+    box-shadow: 2px 2px 5px #000;
+}
+
+.registro input[type="submit"]{
+    width: 54%;
+    padding: 15px;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.registro input[type="submit"]:hover{
+    box-shadow: 2px 2px 5px #000;
+}
+
+
+a{
+    text-decoration: none;
+    color: #336af5;
+}
+
+/*Button logout style*/
+.log{
+    text-align: center;
+}
+.log button{
+    width: 20%;
+    margin: 10px auto;
+    padding: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+}
+.log button:hover{
+    box-shadow: 2px 2px 5px #000;
+}
+
+/*Style icon*/
+.user-icon{
+    text-align: center;
+}
+
+.user-icon .fa-user{
+    font-size: 100px;
+    color: #456dff;
+}
+
+.user-icon p{
+    font-size: 20px;
+}
+
+.search{
+    text-align: center;
+}
+
+/*INPUTS SEARCH STYLE*/
+.search input[type="email"]{
+    width: 30%;
+    padding: 5px;
+    margin: 10px auto;
+    background: none;
+    border: 1px solid; 
+}
+
+.search input[type="email"]:focus{
+    box-shadow: 2px 2px 5px #000;
+}
+
+.search input[type="submit"]{
+    width: 10%;
+    padding: 6px;
+    margin: 10px auto;
+    background: #336af5;
+    color: #fff;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+/*Post section style*/
+.post{
+    margin: 5px;
+}
+
+.post textarea{
+    font-size: 16px;
+    color: #000;
+}
+
+.post-button{
+    width: 10%;
+    padding: 6px;
+    background: #336af5;
+    color: #fff;
+    border: 1px solid;
+    cursor: pointer;
+}
+/*Post style session*/
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+
+table tr td button{
+    float: right;
+    cursor: pointer;
+}
+
+.delete-post{
+    width: 10%;
+    padding: 6px;
+    margin: 10px auto;
+    background: #ff353d;
+    color: #fff;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.aux{/*Hidde for date input:text*/
+    background: none;
+    border: none;
+}
+
+.aux1{/*Hidde for post input:text*/
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+
+.aux2{/*Hidde for id input:text*/
+    background: none;
+    border: none;
+    color: none;
+}
