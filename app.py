@@ -3,8 +3,9 @@ from dbconnection.connection import *
 from datetime import date, datetime
 
 app = Flask(__name__)
-app.secret_key = 'steven'# secrete key
+app.secret_key = '<your secret key>'# secrete key
 
+#THE FUNCTIONS WITH THE NAMES OF COMMENTS ACTUALLY HANDLE THE POSTS
 
 # HOME
 @app.route('/')
